@@ -1,2 +1,2 @@
-# Java-HW3
-Sim City like app
+# Java-HW2
+CS-372 HW2
