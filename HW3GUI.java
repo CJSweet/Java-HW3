@@ -238,7 +238,6 @@ public class HW3GUI implements MouseMotionListener, ActionListener, MouseListene
 		} catch (IOException e) {
 			System.out.printf("oops");
 		}
-		ChrisSweetLabel.setIcon(new ImageIcon("C:\\Users\\csweet20\\Desktop\\Java\\HW3\\src\\police.png"));
 		ChrisSweetLabel.setForeground(Color.MAGENTA);
 		ChrisSweetLabel.setBackground(Color.YELLOW);
 		mainPanel.add(ChrisSweetLabel);
@@ -246,7 +245,14 @@ public class HW3GUI implements MouseMotionListener, ActionListener, MouseListene
 		
 		//CityImage setup
 		CityImage.setVerticalAlignment(SwingConstants.TOP);
-		CityImage.setIcon(new ImageIcon("C:\\Users\\csweet20\\Desktop\\Java\\HW3\\src\\City.png"));
+		try {
+			URL city = new URL("https://piskel-imgstore-b.appspot.com/img/097dcf68-1783-11e9-9dd3-c7812b7144d1.gif");
+			Image cityImage = ImageIO.read(city);
+			CityImage.setIcon(new ImageIcon(cityImage));
+
+		} catch (IOException e) {
+			System.out.printf("oops");
+		}
 		CityImage.setHorizontalAlignment(SwingConstants.CENTER);
 		CityImage.setBounds(0, 0, 704, 627);
 		
